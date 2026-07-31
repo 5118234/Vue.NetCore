@@ -1,4 +1,6 @@
-## Vue + .NetCore前后端分离，支持对前端、后台基础业务代码扩展的快速发开框架
+
+
+## Vue + .Net8前后端分离，不一样的快速开发框架(支持信创)
 
 ## 框架核心
  - 快速开发(基础功能全部由代码生成器生成)
@@ -16,67 +18,56 @@
  - 编写各种后台restful api接口。后台基础代码由代码生成器完成,在生成的代码上继续编写业务即可
  - 前端表单开发(直接上手看demo即可)
  - 配合app做H5或全h5开发
- - 发布静态(h5)页面,框架已经提供了demo
+ - 移动端开发、app、微信小程序(uniapp)，见下面介绍
  - 在现有的代码生成器功能上，继续定制开发代码生成器功能,解决重复性工作
 ## 框架开发依赖环境
- - 后台：VS2019 、.NetCore3.1 、EFCore3.1、JWT、Dapper、Autofac、SqlServer/MySql、Redis(可选,默认使用内置IMemory)
- - 前端：VsCode、Vue2.0（webpack、node.js,如果没有此环境自行搜索:vue webpack npm)、vuex、axios、promise、iview、element-ui
- 
-## 项目启动与上手
- - http://www.volcore.xyz/document/guide
+ - 后台：VS2022 、.Net8、EFCor8.0、SqlSugar、JWT、Dapper、SignalR、Quartz.Net、Autofac、SqlServer/MySql/PGSql/Oracle、Redis
+ - 前端：VsCode、Vue2/vue3、Vite、TypeScript、vuex、axios、promise、element ui、element plus
+## 链接
 
-## 框架2.0已更新(部分新增功能截图)
-增加切换皮肤功能
-![Home](https://github.com/cq-panda/Vue.NetCore/blob/master/imgs/home_them.png)  
-增加可复用的后台请求参数校验
-![Home](https://github.com/cq-panda/Vue.NetCore/blob/master/imgs/validator.png)  
-增加树形菜单与代码生成页面使用
-![Home](https://github.com/cq-panda/Vue.NetCore/blob/master/imgs/x7tree.png)  
-增加文本编辑器直接发布静态页面功能
-![Home](https://github.com/cq-panda/Vue.NetCore/blob/master/imgs/editor.png)  
-增加真实可用的一对多从表(不限从表数量)扩展
-![Home](https://github.com/cq-panda/Vue.NetCore/blob/master/imgs/multi.png)  
-图表
-![Home](https://github.com/cq-panda/Vue.NetCore/blob/master/imgs/charts.png)  
+## [vol框架视频](https://www.cctalk.com/m/group/90268531)
+## [vol框架企业版](http://pro.volcore.xyz/)
+## [NET视频教程(微软MVP-ACE录制)](https://space.bilibili.com/525836469)
+## [元讯趣编程交流社区](https://www.qubcedu.com/)
+## [易软通开源免费openWMS系统](https://gitee.com/yiruantong/open-wms)
+## [旧版本代码已迁移至仓库](https://gitee.com/x_discoverer/vol_v3)
 
+#### 框架文档
+vue3版本: [http://www.volcore.xyz](http://www.volcore.xyz) <br> 
+vue2版本: [http://v2.volcore.xyz/document/guide](http://v2.volcore.xyz/document/guide) <br> 
+App、H5、微信小程序: [http://app.volcore.xyz/](http://app.volcore.xyz/) <br> 
 
+#### 2023.10增加sqlsugar适配
+不是简单的增加sqlsugar而是重写后台，增加框架后台sqlsugar版本并独立维护 <br> 
+sqlsugar: [https://www.donet5.com/](https://www.donet5.com/)
 
-## 1、只读基础表单
-整个只读的基础表单的所有前后端代码，全部由代码生成器生成，代码生成器中几乎不需要配置，并支持并后端业务代码扩展，直接生成代码后，配置菜单权限即可
-![Home](https://github.com/cq-panda/Vue.NetCore/blob/master/imgs/table1.png)  
+## 框架移动端（uniapp）已发布,同样全自动生成代码,扫描小程序二维码即可查看
+![Home](https://github.com/cq-panda/Vue.NetCore/blob/master/imgs/home.png)  
 
-## 2、自动绑定下拉框数据表单
-整个自动绑定下拉框数据表单的所有前后端代码，全部由代码生成器生成，并支持并后端业务代码扩展，在代码生成器中只需要指定数据源编号，页面加载时会根据编号自动加载数据源并绑定  
-![Home](https://github.com/cq-panda/Vue.NetCore/blob/master/imgs/table2.png)  
+## 1、标准页面
+整个页面所有前后端代码，全部由代码生成器界面上配置生成，并支持并后端业务代码扩展
+![Home](https://github.com/cq-panda/Vue.NetCore/blob/master/imgs/page1.png)  
 
-## 3、启用图片支持、审核表单
-整个启用图片支持、审核表单的所有前后端代码，全部由代码生成器生成，并支持并后端业务代码扩展，审核功能需要在菜单配置权限、代码生成器中勾选启用图片支持
-![Home](https://github.com/cq-panda/Vue.NetCore/blob/master/imgs/table3.png)  
+## 2、主子表页面
+同样由代码生成器自动生成，零代码实现整个页面主子表的新建、编辑、删除、查询、导入、导出功能
+![Home](https://github.com/cq-panda/Vue.NetCore/blob/master/imgs/main-01.png)  
 
-## 4、高级查询
-整个表单的所有前后端代码，全部由代码生成器生成，并支持并后端业务代码扩展，查询字段、类型(下拉框、日期、TextArea等)、所在行与列都由代码生成器完成，不需要写任何代码  
-    ![Home](https://github.com/cq-panda/Vue.NetCore/blob/master/imgs/tablesearch4.png)  
-    
-## 5、主从表新建、编辑
-主从表新建、编辑所有前后端代码，全部由代码生成器生成，并支持并后端业务代码扩展，新建、编辑从表配置、字段、类型(下拉框、日期、TextArea等)、所在行与列、字段是否只读、标签显示的长度等都由代码生成器完成，不需要写任何代码  
-![Home](https://github.com/cq-panda/Vue.NetCore/blob/master/imgs/editTbale2.png)  
+主子表编辑页面
+![Home](https://github.com/cq-panda/Vue.NetCore/blob/master/imgs/main-02.png)  
 
+## 3、审批流程配置
+![Home](https://github.com/cq-panda/Vue.NetCore/blob/master/imgs/flow.png)  
 
-## 6、excel导入
-excel导入整个页面都由代码生成器生成，导入的字段、字段是否必填，下载模板也由代码生成器上配置(自己根据实际需要决定是否采用此方法)，导入时会验证是否为空与数据的合法性，逻辑校验自己实现扩展方法即可  
-![Home](https://github.com/cq-panda/Vue.NetCore/blob/master/imgs/importTable1.png)  
+## 4、数据审批
+![Home](https://github.com/cq-panda/Vue.NetCore/blob/master/imgs/flow02.png)  
 
+## 5、树形结构
+只需少量配置即可完成树形结构配置编辑，按层级加载数据等功能
+![Home](https://github.com/cq-panda/Vue.NetCore/blob/master/imgs/tree.png)  
 
-## 7、H5开发
-![Home](https://github.com/cq-panda/Vue.NetCore/blob/master/imgs/h5.jpg)  
-
-## 8、权限分配
-目前只实现了对用户的角色的Action进行权限分配
-![Home](https://github.com/cq-panda/Vue.NetCore/blob/master/imgs/auth.png)  
-
-## 9、代码生成器
-代码生成器提供了20多种可配置的属性，可灵活配置显示、查询、编辑、导入、导出、主从关系等功能<a href="http://132.232.2.109/document/coder">点击看代码生成器文档</a>
-![Home](https://github.com/cq-panda/Vue.NetCore/blob/master/imgs/coder.png)  
+## 6、图表统计
+框架提供了丰富的图表统计，能复制就能开发
+![Home](https://github.com/cq-panda/Vue.NetCore/blob/master/imgs/state.png)  
 
 其他功能。。。。。
 
@@ -84,13 +75,15 @@ excel导入整个页面都由代码生成器生成，导入的字段、字段是
  - 框架内置了大量的通用组件可直接使用,并内置了基于本框架定制开发的代码生成器，尽量避免重复性代码编写。
  - 框架不仅仅是快速开发，更多的是倾向于业务代码扩展的编写与代码规范。
  - 如果有什么问题或建议，提issue或加QQ：283591387
- - QQ交流群：45221949
- - 如果你觉得框架对你有用，帮忙点个星，非常感谢!
- - demo服务器是腾讯云linux服务器带宽1M，多人访问会出现延迟情况
+
+ - QQ3群：743852316(已满)
+ - QQ4群：959924606
  - 
- - demo地址：http://www.volcore.xyz
+ - vue3地址：http://www.volcore.xyz
+ - vue2地址：http://v2.volcore.xyz
  - 帐号：admin666密码：123456（本地超级管理员帐号：admin密码123456)
  - github地址：https://github.com/cq-panda/vue.netcore
- - 框架文档：http://www.volcore.xyz/document/guide
- - 框架更新日志：http://www.volcore.xyz/document/log
+ - gitee码云：https://gitee.com/x_discoverer/Vue.NetCore
+ - 框架文档：http://v2.volcore.xyz/document/guide
+ - 框架更新日志：http://v2.volcore.xyz/document/log
  
